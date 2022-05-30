@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    
+    /*background: url(./assets/matrix666.jpeg) no-repeat;*/
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a0/Digital_rain_animation_small_letters_shine.gif");
+    
+    background-position: 100% 0%;
+    
+}
+.fondo{
+    background-image: url("./assets/matrix666.jpeg"); 
+}
+
+.header{
+    /*background-color: rgba(2, 83, 2, 0.692);*/
+    background-color: rgba(4, 63, 4, 0.897);
+    border-radius: 3px;
+}
+.headerForm {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a0/Digital_rain_animation_small_letters_shine.gif");
+}
+.logo{
+    
+    width: 230px;
+    margin-right: 110px;
+}
+.modalOscuro {
+
+    background-color: rgba(4, 34, 4, 0.897);
+
+}
+.btn-block{
+    display: inline-block;
+    width: 100%;
+}

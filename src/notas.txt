@@ -1,0 +1,94 @@
+{
+  "acercaDe": [
+    {
+      "tituloPrincipal": "Acerca de",
+      "fPerfil": "https://i.ibb.co/SvpZqjB/image.png",
+      "nombre": "Luis Salinas",
+      "titulo": "Programador Web Full Stack Jr.",
+      "parrafo": "Aca va un texto ...."
+    }
+  ],
+  "experiencia": [
+    {
+      "id": 0,
+      "titulo": "CoderHouse",
+      "parrafo": "Aca va un texto ..."
+    },
+    {
+      "id": 1,
+      "titulo": "Absti S.A.",
+      "parrafo": "Aca va un texto ..."
+    },
+    {
+      "id": 2,
+      "titulo": "Desarrollo Web Free Lance",
+      "parrafo": "Aca va un texto ..."
+    }
+  ],
+  "educacion": [
+        { 
+            "id":0,
+            "titulo": "CoderHouse",
+            "parrafo": "Aca va un texto ..."
+        },
+        { 
+            "id":1,
+            "titulo": "TECLAB",
+            "parrafo": "Aca va un texto ..."
+        },
+        { 
+            "id":2,
+            "titulo": "UBA-IALAB",
+            "parrafo": "Aca va un texto ..."
+        },
+        { 
+            "id":3,
+            "titulo": "Codo a Codo",
+            "parrafo": "Aca va un texto ..."
+        },
+        { 
+            "id":4,
+            "titulo": "Oracle Next Education",
+            "parrafo": "Aca va un texto ..."
+  
+        }
+  ],
+  "skills": [
+    {
+      "nombre": "Javascript",
+      "porcentaje": "80"
+    },
+    {
+      "nombre": "Typescript",
+      "porcentaje": "40"
+    },
+    {
+      "nombre": "Angular",
+      "porcentaje": "40"
+    },
+    {
+      "nombre": "HTML",
+      "porcentaje": "90"
+    },
+    {
+      "nombre": "CSS",
+      "porcentaje": "75"
+    },
+    {
+      "nombre": "Bootstrap",
+      "porcentaje": "90"
+    },
+    {
+      "nombre": "PostgreSQL",
+      "porcentaje": "70"
+    },
+    {
+      "nombre": "MySQL",
+      "porcentaje": "50"
+    },
+    {
+      "nombre": "Java",
+      "porcentaje": "30"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<div class="header m-5">
+    <div class="
+            scalein 
+            animation-duration-2000 
+            animation-iteration-infinite 
+            flex 
+            align-items-center 
+            justify-content-center
+            font-bold 
+            bg-linear 
+            text-black-alpha-90 
+            border-round 
+            m-2 
+            px-5 
+            py-1 
+            mb-5">
+        <h1>Educacion</h1>
+    </div>
+    <div *ngFor="let edu of educacion;" class="text-black-alpha-90">
+        <p class="text-right">
+            <i class="mx-2 pi pi-pencil" style="color:white;" (click)="starEdition(edu)"></i>
+            <i class="mx-2 pi pi-trash" style="color:white;" (click)="onDelete(edu)"></i>
+        </p>
+        
+        <div class="m-5 row justify-content-center">
+            <form  *ngIf="educacionSelected" (ngSubmit)="onUpdate(edu)"
+                    class="col-auto p-5 text-center m-5 row justify-content-center rounded border border-dark headerForm text-white">
+                <h5 class="header p-2">Editar titulo</h5>
+                <input type="text" pInputText [(ngModel)]="educacionSelected.titulo" name="edu.titulo"><br>
+                <h5 class="header p-2 mt-5">Editar parrafo</h5>
+                <input type="text" pInputText [(ngModel)]="educacionSelected.parrafo" name="edu.parrafo">
+
+                <button pButton type="submit" label="Actualizar" class="p-button-primary mt-5"></button>
+            </form>
+        </div>
+        <div class="grid text-center flex align-items-center mb-5">
+            <div class="col-12 md:col-6 lg:col-6">
+                <h2 class="text-center">
+                    {{edu.titulo}}
+                </h2>
+            </div>
+            <div class="col-12 md:col-6 lg:col-6">
+                <p class="textoJustificado m-5">
+                    {{edu.parrafo}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

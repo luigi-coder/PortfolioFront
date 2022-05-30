@@ -1,0 +1,55 @@
+<div *ngFor="let dato of acercaDe" 
+     class="text-black-alpha-90 header m-5">
+
+    <div class="
+            scalein 
+            animation-duration-2000 
+            animation-iteration-infinite 
+            flex 
+            align-items-center 
+            justify-content-center
+            font-bold 
+            bg-linear 
+            text-black-alpha-90 
+            border-round 
+            
+            px-5 
+            py-1 
+            mb-5">
+        <h1>{{dato.tituloPrincipal}}</h1>
+    </div>
+    <p class="text-right">
+        <i class="mx-2 pi pi-pencil" style="color:white;" (click)="starEdition(dato)"></i>
+        <i class="mx-2 pi pi-trash" style="color:white;" (click)="onDelete(dato)"></i>
+    </p>
+
+    <div class="m-5 row justify-content-center">
+        <form  *ngIf="acercaDeSelected" (ngSubmit)="onUpdate(dato)"
+                class="col-auto p-5 text-center m-5 row justify-content-center rounded border border-dark headerForm text-white">
+            <h5 class="header p-2">Editar nombre</h5>
+            <input type="text" pInputText [(ngModel)]="acercaDeSelected.nombre" name="dato.nombre">
+            <h5 class="header p-2 mt-5">Editar titulo</h5>
+            <input type="text" pInputText [(ngModel)]="acercaDeSelected.titulo" name="dato.titulo">
+            <h5 class="header p-2 mt-5">Editar parrafo</h5>
+            <input type="text" pInputText [(ngModel)]="acercaDeSelected.parrafo" name="dato.parrafo">
+
+            <button pButton type="submit" label="Actualizar" class="p-button-primary mt-5"></button>
+        </form>
+    </div>
+
+    <div class="grid text-center flex align-items-center mb-5">
+        <div class="col-12 md:col-6 lg:col-6">
+            <img src={{dato.fotoPerfil}}
+                 class="rounded mx-auto d-block imgPort" alt="...">
+            <div class="mt-5">
+                <h1>{{dato.nombre}}</h1>
+            </div>
+        </div>
+        <div class="col-12 md:col-6 lg:col-6">
+            <h2 class="mb-5">{{dato.titulo}}</h2>
+            <p class="textoJustificado m-5">
+                {{dato.parrafo}}
+            </p>
+        </div>
+    </div>
+</div>

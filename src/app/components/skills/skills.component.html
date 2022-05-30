@@ -1,0 +1,44 @@
+<div class="header m-5 text-black-alpha-90">
+    <div class="scalein animation-duration-2000 animation-iteration-infinite flex align-items-center justify-content-center
+    font-bold bg-linear text-black-alpha-90 border-round m-2 px-5 py-1 mb-5">
+        <h1>Hard & Soft Skills</h1>
+    </div>
+    <!-- <div class="scalein animation-duration-3000 animation-iteration-infinite flex align-items-center justify-content-center
+    font-bold bg-linear text-black-alpha-90 border-round m-2 px-5 py-1 mb-5"> -->
+        <div class="grid text-center mt-5">
+            <div    *ngFor="let item of arraySkills"
+                    class="col-12 md:col-6 lg:col-4 mb-5">
+
+                    <div class="m-5 row justify-content-center">
+                        <form  *ngIf="arraySkillsSelected" (ngSubmit)="onUpdate(item)"
+                                class="col-auto p-5 text-center m-5 row justify-content-center rounded border border-dark headerForm text-white">
+                            <h5 class="header p-2">Editar nombre</h5>
+                            <input type="text" pInputText [(ngModel)]="arraySkillsSelected.nombre" name="dato.nombre">
+                            <h5 class="header p-2 mt-5">Editar porcentaje</h5>
+                            <input type="text" pInputText [(ngModel)]="arraySkillsSelected.porcentaje" name="dato.porcentaje">
+                            
+                            <button pButton type="submit" label="Actualizar" class="p-button-primary mt-5"></button>
+                        </form>
+                    </div>
+
+                    <div class="flex justify-content-center flex-wrap">
+                        <div class="flex align-items-center justify-content-center font-bold text-gray-900 border-round m-2">
+                            <h3>{{item.nombre}}</h3>
+                        </div>
+                        <div class="flex align-items-center justify-content-center font-bold text-gray-900 border-round m-2">
+                            <i class="mx-2 pi pi-pencil" style="color:white;" (click)="starEdition(item)"></i>
+                            <i class="mx-2 pi pi-trash" style="color:white;" (click)="onDelete(item)"></i>
+                        </div>
+                    </div>
+               
+                    <p-knob 
+                    [ngModel]="item.porcentaje"
+                    valueTemplate="{value}%"
+                    valueColor="green"
+                    rangeColor="black">
+                    </p-knob>
+            </div>
+        </div>
+    <!-- </div> -->
+
+</div>
