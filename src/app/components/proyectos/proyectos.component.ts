@@ -10,7 +10,7 @@ import { DatosService } from '../services/datos.service';
 export class ProyectosComponent implements OnInit {
 
   proyectos: Proyectos[] = [];
-  
+  proyectosSelected: Proyectos = null;
 
   constructor(private proyectosService: DatosService) { }
 
@@ -21,6 +21,38 @@ export class ProyectosComponent implements OnInit {
   
         this.proyectos = res;
       })
+  }
+
+  onDelete(data:Proyectos){
+
+    this.proyectosService.deleteDataProyectos(data)
+      .subscribe(res => {
+
+        this.proyectos = this.proyectos.filter(proyecto => proyecto.id !== data.id)
+
+      });
+  }
+
+  starEdition(data:Proyectos){
+
+    this.proyectosSelected = data;
+  }
+
+  onUpdate(data:Proyectos) {
+
+    if(!this.proyectosSelected){
+
+      return;
+    }
+
+    const index = this.proyectos.findIndex(proyecto => proyecto.id === data.id)
+
+    this.proyectos[index].nombre = this.proyectosSelected.nombre;
+    this.proyectos[index].url = this.proyectosSelected.url;
+
+    this.proyectosService.updateDataProyectos(data).subscribe();
+
+    this.proyectosSelected = null;
   }
 
 }

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './iniciar-sesion/header.component';
 import { AcercaComponent } from './acerca/acerca.component';
 import { ExperienciaComponent } from './experiencia/experiencia.component';
 import { EducacionComponent } from './educacion/educacion.component';
@@ -15,10 +15,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarModule } from 'primeng/sidebar';
 import { CardModule } from 'primeng/card';
 import { KnobModule } from "primeng/knob";
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DialogModule } from "primeng/dialog";
 import { InputTextModule } from 'primeng/inputtext';
 import { ProyectosComponent } from './proyectos/proyectos.component';
+import { PortfolioDinamicoComponent } from './portfolio-dinamico/portfolio-dinamico.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
     ExperienciaComponent,
     EducacionComponent,
     SkillsComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    PortfolioDinamicoComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +41,8 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
     FormsModule,
     HttpClientModule,
     DialogModule,
-    InputTextModule
+    InputTextModule,
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent,

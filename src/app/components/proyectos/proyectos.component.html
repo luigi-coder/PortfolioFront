@@ -28,23 +28,28 @@
         </div> -->
         <div class="grid flex align-items-center mb-5 text-black-alpha-90">
             <div class="col-10 md:col-8 lg:col-10 mx-5">
+                <div class="m-5 justify-content-center">
+                    <form *ngIf="proyectosSelected" (ngSubmit)="onUpdate(pro)"
+                          class="col-auto p-5 text-center m-5 row justify-content-center rounded border border-dark headerForm text-white">
+                        <h5>Editar nombre del Proyecto</h5>
+                        <input type="text" pInputText [(ngModel)]="proyectosSelected.nombre" name="pro.nombre">
+
+                        <button pButton type="submit" label="Actualizar" class="p-button-primary mt-5"></button>
+                    </form>
+                </div>
+
                 <div>
                     <div class="flex flex-wrap">
                         <div class="flex align-items-center justify-content-center font-bold">
                             <h2>{{pro.nombre}}</h2>
                         </div>
                         <div class="flex align-items-center justify-content-center text-white" style="margin-left: 50px;">
-                            <i class="mx-2 pi pi-pencil" style="color:white;"></i>
-                            <i class="mx-2 pi pi-trash" style="color:white;"></i>
+                            <i class="mx-2 pi pi-pencil" style="color:white;" (click)="starEdition(pro)"></i>
+                            <i class="mx-2 pi pi-trash" style="color:white;" (click)="onDelete(pro)"></i>
                         </div>
                     </div>
                 </div>
                 
-                <p> En este proyecto se utilizo la tecnologia de Angular, 
-                    TypeScript, bootstrap, y consumimos la api llamada
-                    GIPHY Developers
-
-                </p>
                 <button pButton>
                     <a  href="{{pro.url}}" 
                         target="_blank"

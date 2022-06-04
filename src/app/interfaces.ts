@@ -47,3 +47,9 @@ export interface Proyectos {
     nombre: string;
     url: string;
 }
+
+export interface Login {
+
+    userName: string;
+    password: string;
+}
