@@ -1,0 +1,139 @@
+<div *ngFor="let dato of acercaDe" 
+     class="text-black-alpha-90 header m-5">
+
+    <div class="
+            scalein 
+            animation-duration-2000 
+            animation-iteration-infinite 
+            flex 
+            align-items-center 
+            justify-content-center
+            font-bold 
+            bg-linear 
+            text-black-alpha-90 
+            border-round 
+            px-5 
+            py-1 
+            mb-5">
+        <h1>{{dato.tituloPrincipal}}</h1>
+    </div>
+    <div class="grid text-center flex align-items-center mb-5">
+        <div class="col-12 md:col-6 lg:col-6">
+            
+            <img src={{dato.fotoPerfil}}
+                 class="rounded mx-auto d-block imgPort" alt="...">
+            <div class="mt-5">
+                <h1>{{dato.nombre}}</h1>
+            </div>
+        </div>
+        <div class="col-12 md:col-6 lg:col-6">
+            <h2 class="mb-5">{{dato.titulo}}</h2>
+            <p class="textoJustificado m-5">
+                {{dato.parrafo}}
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<!-- EXPERIENCIA -->
+
+<div class="header m-5">
+    <div class="
+            scalein 
+            animation-duration-2000 
+            animation-iteration-infinite 
+            flex 
+            align-items-center 
+            justify-content-center
+            font-bold 
+            bg-linear 
+            text-black-alpha-90 
+            border-round 
+            m-2 
+            px-5 
+            py-1 
+            mb-5">
+    <h1>Experiencia</h1>
+    </div>
+    <div *ngFor="let exp of experiencia" class="text-black-alpha-90">
+        
+        
+       
+        <div class="grid text-center flex align-items-center mb-5">
+            <div class="col-12 md:col-6 lg:col-6">
+                <h2 class="text-center">
+                    {{exp.titulo}}
+                </h2>
+            </div>
+            <div class="col-12 md:col-6 lg:col-6">
+                <p class="textoJustificado m-5">
+                    {{exp.parrafo}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- EDUCACION -->
+
+<div class="header m-5">
+    <div class="
+            scalein 
+            animation-duration-2000 
+            animation-iteration-infinite 
+            flex 
+            align-items-center 
+            justify-content-center
+            font-bold 
+            bg-linear 
+            text-black-alpha-90 
+            border-round 
+            m-2 
+            px-5 
+            py-1 
+            mb-5">
+        <h1>Educacion</h1>
+    </div>
+    <div *ngFor="let edu of educacion;" class="text-black-alpha-90">
+        
+        <div class="grid text-center flex align-items-center mb-5">
+            <div class="col-12 md:col-6 lg:col-6">
+                <h2 class="text-center">
+                    {{edu.titulo}}
+                </h2>
+            </div>
+            <div class="col-12 md:col-6 lg:col-6">
+                <p class="textoJustificado m-5">
+                    {{edu.parrafo}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SKILLS -->
+<div class="header m-5 text-black-alpha-90">
+    <div class="scalein animation-duration-2000 animation-iteration-infinite flex align-items-center justify-content-center
+    font-bold bg-linear text-black-alpha-90 border-round m-2 px-5 py-1 mb-5">
+        <h1>Hard & Soft Skills</h1>
+    </div>
+        <div class="grid text-center mt-5">
+            <div    *ngFor="let item of arraySkills"
+                    class="col-12 md:col-6 lg:col-4 mb-5">
+
+                    <div class="flex justify-content-center flex-wrap">
+                        <div class="flex align-items-center justify-content-center font-bold text-gray-900 border-round m-2">
+                            <h3>{{item.nombre}}</h3>
+                        </div> 
+                    </div>
+               
+                    <p-knob 
+                    [ngModel]="item.porcentaje"
+                    valueTemplate="{value}%"
+                    valueColor="green"
+                    rangeColor="black">
+                    </p-knob>
+            </div>
+        </div>
+</div>
+

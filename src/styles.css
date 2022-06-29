@@ -34,3 +34,7 @@ body{
     display: inline-block;
     width: 100%;
 }
+
+.modal-content {
+    z-index: -1;
+  }

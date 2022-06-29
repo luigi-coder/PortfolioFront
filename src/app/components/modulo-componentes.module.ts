@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 
-import { HeaderComponent } from './iniciar-sesion/header.component';
 import { AcercaComponent } from './acerca/acerca.component';
 import { ExperienciaComponent } from './experiencia/experiencia.component';
 import { EducacionComponent } from './educacion/educacion.component';
@@ -20,6 +19,13 @@ import { DialogModule } from "primeng/dialog";
 import { InputTextModule } from 'primeng/inputtext';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { PortfolioDinamicoComponent } from './portfolio-dinamico/portfolio-dinamico.component';
+import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { PortfolioEstaticoComponent } from './portfolio-estatico/portfolio-estatico.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -29,7 +35,8 @@ import { PortfolioDinamicoComponent } from './portfolio-dinamico/portfolio-dinam
     EducacionComponent,
     SkillsComponent,
     ProyectosComponent,
-    PortfolioDinamicoComponent
+    PortfolioDinamicoComponent,
+    PortfolioEstaticoComponent,
   ],
   imports: [
     CommonModule,
@@ -42,7 +49,9 @@ import { PortfolioDinamicoComponent } from './portfolio-dinamico/portfolio-dinam
     HttpClientModule,
     DialogModule,
     InputTextModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule,
+    AppRoutingModule
   ],
   exports: [
     HeaderComponent,
@@ -50,7 +59,9 @@ import { PortfolioDinamicoComponent } from './portfolio-dinamico/portfolio-dinam
     ExperienciaComponent,
     EducacionComponent,
     SkillsComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    PortfolioDinamicoComponent
+    
   ]
 })
 export class ModuloComponentesModule { }
