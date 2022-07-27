@@ -15,15 +15,15 @@ const httpOptions = {
 })
 export class DatosService {
   
-  apiUrlAcercaDe: string = "http://localhost:8080/auth";
+  apiUrlAcercaDe: string = "https://secret-peak-06594.herokuapp.com/auth";
   //apiUrlAcercaDe: string = environment.baseUrl + '/acercaDe';
-  apiUrlExperiencia: string = "http://localhost:8080/auth";
+  apiUrlExperiencia: string = "https://secret-peak-06594.herokuapp.com/auth";
   //apiUrlExperiencia: string = environment.baseUrl + '/experiencia';
-  apiUrlEducacion: string = "http://localhost:8080/auth";
+  apiUrlEducacion: string = "https://secret-peak-06594.herokuapp.com/auth";
   //apiUrlEducacion: string = environment.baseUrl + '/educacion';
-  apiUrlSkills: string = "http://localhost:8080/auth";
+  apiUrlSkills: string = "https://secret-peak-06594.herokuapp.com/auth";
   //apiUrlSkills: string = environment.baseUrl + '/skills';
-  apiUrlProyectos: string = "http://localhost:8080/auth";
+  apiUrlProyectos: string = "https://secret-peak-06594.herokuapp.com/auth";
   //apiUrlProyectos: string = environment.baseUrl + '/proyectos';
 
   constructor(private http: HttpClient) { }

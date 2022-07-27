@@ -46,6 +46,7 @@ export interface Proyectos {
     id: string;
     nombre: string;
     url: string;
+    img: string;
 }
 
 export interface Login {

@@ -1,11 +1,9 @@
-<div class="header m-5">
+<!-- <div class="header m-5">
     <div class="
             scalein 
             animation-duration-2000 
             animation-iteration-infinite 
             flex 
-             
-            
             font-bold 
             bg-linear 
             text-black-alpha-90 
@@ -14,22 +12,10 @@
         <h1>Proyectos</h1>
     </div>
     <div    *ngFor="let pro of proyectos">
-        
-        
-        <!-- <div class="m-5 row justify-content-center">
-            <form class="col-auto p-5 text-center m-5 row justify-content-center rounded border border-dark headerForm text-white">
-                <h5 class="header p-2">Editar titulo</h5>
-                <input type="text" name="edu.titulo"><br>
-                <h5 class="header p-2 mt-5">Editar parrafo</h5>
-                <input type="text" name="edu.parrafo">
-
-                <button pButton type="submit" label="Actualizar" class="p-button-primary mt-5"></button>
-            </form>
-        </div> -->
         <div class="grid flex align-items-center mb-5 text-black-alpha-90">
             <div class="col-10 md:col-8 lg:col-10 mx-5">
                 <div class="m-5 justify-content-center">
-                    <form *ngIf="proyectosSelected" (ngSubmit)="onUpdate(pro)"
+                    <form *ngIf="proyectosSelected === pro" (ngSubmit)="onUpdate(pro)"
                           class="col-auto p-5 text-center m-5 row justify-content-center rounded border border-dark headerForm text-white">
                         <h5>Editar nombre del Proyecto</h5>
                         <input type="text" pInputText [(ngModel)]="proyectosSelected.nombre" name="pro.nombre">
@@ -59,4 +45,50 @@
             </div>
         </div>
     </div>
+</div> -->
+
+
+
+<div class="header m-5 text-black-alpha-90">
+    <div class="scalein animation-duration-2000 animation-iteration-infinite flex align-items-center justify-content-center
+    font-bold bg-linear text-black-alpha-90 border-round m-2 px-5 py-1 mb-5">
+        <h1>Proyectos</h1>
+    </div>
+        <div class="grid text-center mt-5">
+            <div    *ngFor="let pro of proyectos"
+                    class="col-12 md:col-6 lg:col-4 mb-5">
+            
+                    <div class="m-5 row justify-content-center">
+                        <form *ngIf="proyectosSelected === pro" (ngSubmit)="onUpdate(pro)"
+                          class="col-auto p-5 text-center m-5 row justify-content-center rounded border border-dark headerForm text-white">
+                        <h5>Editar nombre del Proyecto</h5>
+                        <input type="text" pInputText [(ngModel)]="proyectosSelected.nombre" name="pro.nombre">
+
+                        <button pButton type="submit" label="Actualizar" class="p-button-primary mt-5"></button>
+                    </form>
+                    </div>
+
+                    <div>
+                        <img src="{{pro.img}}" class="mb-3" style="width:200px">
+                    </div>
+
+                    <div class="flex justify-content-center flex-wrap">
+                        <div class="flex align-items-center justify-content-center font-bold text-gray-900 border-round m-2">
+                            <h3>{{pro.nombre}}</h3>
+                        </div>
+                        <div class="flex align-items-center justify-content-center font-bold text-gray-900 border-round m-2">
+                            <i class="mx-2 pi pi-pencil" style="color:white;" (click)="starEdition(pro)"></i>
+                            <i class="mx-2 pi pi-trash" style="color:white;" (click)="onDelete(pro)"></i>
+                        </div>
+                        
+                    </div>
+               
+                    <button pButton>
+                        <a  href="{{pro.url}}" 
+                            target="_blank"
+                            style="text-decoration:none"
+                            class="text-black-alpha-90">Ver aplicacion</a>
+                    </button> 
+            </div>
+        </div>
 </div>

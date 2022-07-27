@@ -10,7 +10,7 @@
                     class="col-12 md:col-6 lg:col-4 mb-5">
 
                     <div class="m-5 row justify-content-center">
-                        <form  *ngIf="arraySkillsSelected" (ngSubmit)="onUpdate(item)"
+                        <form  *ngIf="arraySkillsSelected === item" (ngSubmit)="onUpdate(item)"
                                 class="col-auto p-5 text-center m-5 row justify-content-center rounded border border-dark headerForm text-white">
                             <h5 class="header p-2">Editar nombre</h5>
                             <input type="text" pInputText [(ngModel)]="arraySkillsSelected.nombre" name="dato.nombre">

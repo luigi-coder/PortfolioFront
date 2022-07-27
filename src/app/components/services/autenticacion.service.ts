@@ -7,7 +7,7 @@ import { BehaviorSubject, map, Observable } from 'rxjs';
 })
 export class AutenticacionService {
 
-  url="http://localhost:8080/auth/login";
+  url="https://secret-peak-06594.herokuapp.com/auth/login";
 
   currentUserSubject: BehaviorSubject<any>
 

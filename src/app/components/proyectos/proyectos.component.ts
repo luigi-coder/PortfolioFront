@@ -20,6 +20,7 @@ export class ProyectosComponent implements OnInit {
       .subscribe(res=>{
   
         this.proyectos = res;
+        console.log(this.proyectos);
       })
   }
 

@@ -35,6 +35,7 @@ export class ExperienciaComponent implements OnInit {
   startEdition(data:Experiencia) {
 
     this.experienciaSelected = data;
+  
   }
 
   onUpdate(data:Experiencia) {
@@ -52,7 +53,8 @@ export class ExperienciaComponent implements OnInit {
     this.experiencia[index].titulo = this.experienciaSelected.titulo;
     this.experiencia[index].parrafo = this.experienciaSelected.parrafo;
 
-    this.experienciaService.updateDataExperiencia(data).subscribe();
+    this.experienciaService.updateDataExperiencia(data)
+    .subscribe();
 
     this.experienciaSelected = null;
 

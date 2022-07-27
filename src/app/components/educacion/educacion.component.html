@@ -23,7 +23,7 @@
         </p>
         
         <div class="m-5 row justify-content-center">
-            <form  *ngIf="educacionSelected" (ngSubmit)="onUpdate(edu)"
+            <form  *ngIf="educacionSelected === edu" (ngSubmit)="onUpdate(edu)"
                     class="col-auto p-5 text-center m-5 row justify-content-center rounded border border-dark headerForm text-white">
                 <h5 class="header p-2">Editar titulo</h5>
                 <input type="text" pInputText [(ngModel)]="educacionSelected.titulo" name="edu.titulo"><br>

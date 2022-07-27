@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AcercaDe, Educacion, Experiencia, Skills } from '../../interfaces';
+import { AcercaDe, Educacion, Experiencia, Proyectos, Skills } from '../../interfaces';
 import { DatosService } from '../services/datos.service';
 
 @Component({
@@ -13,6 +13,7 @@ export class PortfolioEstaticoComponent implements OnInit {
   experiencia: Experiencia[] = [];
   educacion:Educacion[] = [];
   arraySkills: Skills[] = [];
+  proyectos: Proyectos[] = [];
 
   constructor(private acercadeService: DatosService) { }
 
@@ -49,6 +50,12 @@ export class PortfolioEstaticoComponent implements OnInit {
                   console.log("contruyendo");
                   console.log(this.arraySkills)
         })
+
+    this.acercadeService.getDataProyectos()
+        .subscribe(res=>{
+    
+        this.proyectos = res;
+    })
   }
 
 }

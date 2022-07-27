@@ -16,14 +16,18 @@
             mb-5">
     <h1>Experiencia</h1>
     </div>
-    <div *ngFor="let exp of experiencia" class="text-black-alpha-90">
+    <div *ngFor="let exp of experiencia; let i=index" class="text-black-alpha-90">
         <p class="text-right">
             <i class="mx-2 pi pi-pencil" style="color:white;" (click)="startEdition(exp)"></i>
             <i class="mx-2 pi pi-trash" style="color:white;" (click)="onDelete(exp)"></i>
         </p>
+
+        <!--Abrir un formulario solo por elemento sin formulario reactivo -->
         
         <div class="m-5 row justify-content-center">
-            <form  *ngIf="experienciaSelected" (ngSubmit)="onUpdate(exp)"
+            <!--Mostrar el form individual-->
+
+            <form  *ngIf="experienciaSelected === exp" (ngSubmit)="onUpdate(exp)"
                     class="col-auto p-5 text-center m-5 row justify-content-center rounded border border-dark headerForm text-white">
                 <h5 class="header p-2">Editar titulo</h5>
                 <input type="text" pInputText [(ngModel)]="experienciaSelected.titulo" name="exp.titulo"><br>
